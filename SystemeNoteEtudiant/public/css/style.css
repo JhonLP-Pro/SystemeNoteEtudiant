@@ -1,0 +1,158 @@
+/* Styles globaux */
+html {
+    scrollbar-width: none; /* Pour Firefox */
+    -ms-overflow-style: none;  /* Pour Internet Explorer et Edge */
+}
+
+/* Pour Chrome, Safari et Opera */
+html::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 10px;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-y: scroll; /* Ajout pour assurer que la barre de défilement est toujours présente */
+}
+
+/* Pour Webkit (Chrome, Safari, etc.) */
+body::-webkit-scrollbar {
+    width: 0.5em; /* Largeur très fine de la barre de défilement */
+}
+
+body::-webkit-scrollbar-track {
+    background-color: transparent; /* Piste transparente */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.1); /* Couleur très légère pour le "pouce" */
+    border-radius: 20px; /* Coins arrondis */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Un peu plus visible au survol */
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+    flex: 1;
+}
+
+header {
+    background: #2c2c2c;
+    color: #ffffff;
+    padding: 20px 0;
+    border-bottom: #4a4a4a 3px solid;
+}
+
+header h1 {
+    margin: 0;
+    text-align: center;
+}
+
+.main-content {
+    padding: 20px;
+    background: #2c2c2c;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #4a4a4a;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background: #5a5a5a;
+    transform: scale(1.05);
+}
+
+footer {
+    background: #2c2c2c;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}
+
+/* Styles pour les formulaires */
+form {
+    background: #2c2c2c;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+input[type="text"], input[type="email"], input[type="password"], textarea, select {
+    width: 98%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #4a4a4a;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+/* Styles pour les listes */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: #2c2c2c;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Styles pour les liens */
+a {
+    color: #4a90e2;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Styles pour les éléments avec défilement */
+.scrollable-content {
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
+}
+
+.scrollable-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.scrollable-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.scrollable-content::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+}
+
+.scrollable-content::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
